@@ -1,0 +1,261 @@
+/* Alapvető stílusok */
+body {
+    font-family: sans-serif; /* Egyszerű betűtípus */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Világos háttér */
+    color: #333; /* Sötét szöveg */
+}
+
+.container {
+    width: 80%; /* Konténer szélessége */
+    margin: 20px auto; /* Középre igazítás és felső/alsó margó */
+    background-color: #fff; /* Fehér háttér a tartalomnak */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Kis árnyék */
+    border-radius: 8px; /* Lekerekített sarkok */
+}
+
+header {
+    background-color: #00563F; /* Sötétzöld háttér */
+    color: #fff; /* Fehér szöveg */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #007BFF; /* Kék alsó szegély */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* Navigáció stílusok */
+nav {
+    background-color: #007BFF; /* Kék háttér */
+    color: #fff; /* Fehér szöveg */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Sorba rendezés */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff; /* Fehér link szöveg */
+    text-decoration: none; /* Aláhúzás eltávolítása */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Színátmenet hoverre */
+}
+
+nav ul li a:hover {
+    color: #f8f9fa; /* Világosabb szín hoverre */
+}
+
+/* Tartalom terület stílusok */
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    color: #00563F; /* Sötétzöld címsor */
+    border-bottom: 2px solid #007BFF; /* Kék alsó szegély */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Szöveg és kép stílusok */
+main p {
+    margin-bottom: 15px;
+    text-align: justify; /* Sorkizárt szöveg */
+}
+
+/* Képek körbefuttatása */
+.img-right {
+    float: right; /* Jobbra igazítás */
+    margin: 0 0 15px 15px; /* Margó alul és balra */
+    max-width: 40%; /* Maximális szélesség a reszponzivitás érdekében */
+    height: auto; /* Arányok megtartása */
+    border: 1px solid #ddd; /* Vékony szegély */
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.img-left {
+    float: left; /* Balra igazítás */
+    margin: 0 15px 15px 0; /* Margó alul és jobbra */
+    max-width: 40%; /* Maximális szélesség a reszponzivitás érdekében */
+    height: auto; /* Arányok megtartása */
+     border: 1px solid #ddd; /* Vékony szegély */
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1); /* Árnyék a bal oldalon */
+     border-radius: 5px;
+}
+
+/* Táblázat stílusok */
+table {
+    width: 100%; /* Teljes szélesség */
+    border-collapse: collapse; /* Szegélyek összevonása */
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd; /* Vékony szegély */
+    padding: 10px;
+    text-align: left; /* Szöveg igazítása balra */
+}
+
+table th {
+    background-color: #00563F; /* Sötétzöld háttér a fejlécnek */
+    color: white; /* Fehér szöveg a fejlécben */
+}
+
+/* Táblázat sorok pszeudo-osztályokkal */
+table tbody tr:first-child {
+    font-weight: bold; /* Első sor félkövér */
+    background-color: #e9ecef; /* Világos szürke háttér */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Páros sorok világosabb szürke háttere */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Páratlan sorok fehér háttere */
+}
+
+table tbody tr:hover {
+    background-color: #ddd; /* Háttérszín változás egér fölé vitelkor */
+}
+
+table tbody tr:nth-child(5n) {
+     border-bottom: 3px solid #007BFF; /* Minden 5. sor után vastagabb kék szegély */
+}
+
+
+/* Képgaléria stílusok */
+.gallery {
+    display: flex; /* Flexbox elrendezés */
+    flex-wrap: wrap; /* Sortörés engedélyezése */
+    gap: 15px; /* Elemek közötti rés */
+    justify-content: center; /* Középre igazítás */
+}
+
+.gallery-item {
+    border: 1px solid #ddd; /* Vékony szegély */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+    flex: 1 1 300px; /* Rugalmas méret, alap 300px */
+    max-width: 320px; /* Maximális méret */
+}
+
+.gallery-item img {
+    display: block; /* Kép blokk elemként */
+    max-width: 100%; /* Maximális szélesség a konténeren belül */
+    height: auto; /* Arányok megtartása */
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+/* Űrlap stílusok */
+form {
+    background-color: #f8f9fa; /* Nagyon világos szürke háttér */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Címke új sorba */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Teljes szélesség */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Padding beleszámít a szélességbe */
+}
+
+.form-group textarea {
+    resize: vertical; /* Csak függőleges átméretezés */
+}
+
+.form-group button {
+    background-color: #007BFF; /* Kék gomb háttér */
+    color: white; /* Fehér gomb szöveg */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Mutató kurzor */
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3; /* Sötétebb kék hoverre */
+}
+
+
+/* Lábléc stílusok */
+footer {
+    background-color: #333; /* Sötétszürke háttér */
+    color: #fff; /* Fehér szöveg */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 5px solid #007BFF; /* Kék felső szegély */
+}
+
+/* Reszponzív kialakítás alapjai */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Kisebb szélesség kisebb képernyőkön */
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Navigációs elemek egymás alá */
+        margin: 5px 0;
+    }
+
+    .img-right, .img-left {
+        float: none; /* Képek úsztatása kikapcsolva */
+        display: block; /* Képek blokk elemként */
+        margin: 15px auto; /* Középre igazítás */
+        max-width: 80%; /* Nagyobb szélesség a képeknek */
+    }
+
+    .gallery-item {
+        flex: 1 1 100%; /* Képek teljes szélességben */
+        max-width: none;
+    }
+}
